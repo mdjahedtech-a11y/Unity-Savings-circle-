@@ -105,8 +105,18 @@ export default function Members() {
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-lg font-bold text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400">
-                        {member.name.charAt(0)}
+                      <div className="h-12 w-12 overflow-hidden rounded-full border border-gray-100 bg-indigo-100 dark:border-gray-800 dark:bg-indigo-900/50">
+                        {member.photo_url ? (
+                          <img 
+                            src={member.photo_url} 
+                            alt={member.name} 
+                            className="h-full w-full object-cover"
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-lg font-bold text-indigo-600 dark:text-indigo-400">
+                            {member.name.charAt(0)}
+                          </div>
+                        )}
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900 dark:text-white">{member.name}</h3>
