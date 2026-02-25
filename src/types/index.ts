@@ -8,6 +8,7 @@ export interface Member {
   monthly_amount: number;
   status: MemberStatus;
   notes?: string;
+  photo_url?: string;
   created_at: string;
 }
 

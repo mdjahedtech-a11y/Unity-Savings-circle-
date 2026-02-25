@@ -4,6 +4,7 @@ import Dashboard from '@/pages/Dashboard';
 import Members from '@/pages/Members';
 import Payments from '@/pages/Payments';
 import Reports from '@/pages/Reports';
+import Profile from '@/pages/Profile';
 import Login from '@/pages/Login';
 import AdminSettings from '@/pages/AdminSettings';
 import { Toaster } from 'sonner';
@@ -57,6 +58,11 @@ export default function App() {
           <Route path="/reports" element={
             <ProtectedLayout>
               <Reports />
+            </ProtectedLayout>
+          } />
+          <Route path="/profile" element={
+            <ProtectedLayout>
+              <Profile />
             </ProtectedLayout>
           } />
           <Route path="/admin" element={

@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Users as UsersIcon, CreditCard, FileText, Settings, LogOut, Shield } from 'lucide-react';
+import { LayoutDashboard, Users as UsersIcon, CreditCard, FileText, Settings, LogOut, Shield, UserCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/context/AuthContext';
 import { Button } from '@/components/ui/Button';
@@ -12,7 +12,7 @@ export const BottomNav = () => {
     { icon: LayoutDashboard, label: 'Home', path: '/' },
     { icon: UsersIcon, label: 'Members', path: '/members' },
     { icon: CreditCard, label: 'Payments', path: '/payments' },
-    { icon: FileText, label: 'Reports', path: '/reports' },
+    { icon: UserCircle, label: 'Profile', path: '/profile' },
   ];
 
   if (isSuperAdmin) {
@@ -60,6 +60,7 @@ export const Sidebar = () => {
     { icon: UsersIcon, label: 'Members', path: '/members' },
     { icon: CreditCard, label: 'Payments', path: '/payments' },
     { icon: FileText, label: 'Reports', path: '/reports' },
+    { icon: UserCircle, label: 'Profile', path: '/profile' },
   ];
 
   if (isSuperAdmin) {
